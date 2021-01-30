@@ -1,0 +1,327 @@
+﻿/* Typecho Plus
+ * Created by 二笔青年 (http://clso.fun)
+ * v0.6.0
+ */
+
+/* DIV 包装 */
+.tplus-div{
+	display: block;
+	border: 1px dotted #bfbfbf;
+	border-radius: 2px;
+}
+.tplus-div .tplus-div-title{
+	display: block;
+	text-align: center;
+	font-size: 1.2em;
+}
+.tplus-div .tplus-div-content{
+	display: block;
+	padding: 3px;
+}
+/* SPAN 包装 */
+.tplus-span{
+	display: inline;
+	border-bottom: 1px dotted #bfbfbf;
+}
+
+/*文章换行标签自定义*/
+.post-content br{
+	line-height: 1.5em;
+}
+
+/*未登录提示*/
+.tplus-unreg{
+	color:red;
+	font-weight: bold;
+	display: block;
+}
+
+/*文章过期提醒*/
+.tplus-modifyalert{
+	text-align: right;
+	margin: 15px 0;
+	font-style: italic;
+	color: #666;
+}
+
+/*高亮，需要使用 !important 来覆盖标签内置背景色*/
+span.tplus-highlight{
+	background-color: yellow !important;
+}
+/*黑幕*/
+span.tplus-heimu{
+	color: #000;
+	background-color: #000;
+	border-radius: 3px;
+	padding: 0 3px;
+	margin: 0 1px;
+}
+span.tplus-heimu:hover{
+	color: #fff;
+}
+/*tips提醒*/
+sup.tplus-tips{
+	color:#009688;
+	text-decoration: underline;
+	cursor: help;
+}
+/*自动选择*/
+span.tplus-select{
+	background-color: #eee;
+	border-radius: 3px;
+	font-size: 0.9em;
+	padding: 1px 5px;
+}
+
+/*任务列表样式*/
+input.tplus-todo {
+	-moz-appearance: inherit;
+	-webkit-appearance: checkbox;
+	width: auto;
+	height: auto;
+	vertical-align: middle;
+	display: none;
+}
+input.tplus-todo + label span.tlogo {
+	display:inline-block;
+	width:20px;
+	height:20px;
+	margin:0 10px 0 0;
+	vertical-align:middle;
+	background:url(typechoplus.png) left top no-repeat;
+}
+input.tplus-todo.done:checked + label span.tlogo {
+	background:url(typechoplus.png) -20px top no-repeat;
+}
+input.tplus-todo.fail + label span.tlogo {
+	background:url(typechoplus.png) -40px top no-repeat;
+}
+input.tplus-todo.alert + label span.tlogo {
+	background:url(typechoplus.png) -60px top no-repeat;
+}
+input.tplus-todo.quest + label span.tlogo {
+	background:url(typechoplus.png) -80px top no-repeat;
+}
+/*任务列表 checkbox 默认样式*/
+input.tplus-todo.nocss + label span.tlogo,
+input.tplus-todo.nocss:checked + label span.tlogo {
+	display:none;
+}
+input.tplus-todo.nocss {
+	display:inline-block;
+	width:16px; height:16px;
+	margin: 0 12px 0 2px;
+	#width:auto; #height:auto;width:auto\0; height:auto\0;width:auto\9; height:auto\9;
+}
+
+
+
+/*自定义分割线*/
+hr.tplus-line{
+	border:none !important;
+	border-width:0 !important;;
+	margin:3em auto !important;
+}
+/* !--- */
+hr.tplus-line1{
+	background:url(hr1.gif) repeat-x;
+	height:2px;
+}
+/* !*** */
+hr.tplus-line2{
+	background:url(hr2.gif) repeat-x;
+	height:10px;
+}
+/* !___ */
+hr.tplus-line3{
+	background:url(hr3.gif) center center no-repeat;
+	height:35px;
+}
+/* !=== */
+hr.tplus-line4{
+	background:url(hr4.gif) center center no-repeat;
+	height:50px;
+}
+/* !+++ */
+hr.tplus-line5{
+	background:url(hr5.gif) center center repeat-x;
+	height:30px;
+}
+
+/*自定义标题*/
+.tplus-heading{
+	padding: 5px;
+	background-color: #eee;
+	border-left: solid 5px #ccc;
+	border-radius: 0 50px 50px 0;
+}
+/*单独定义标题*/
+.tplus-h1, .tplus-h2, .tplus-h3, .tplus-h4, .tplus-h5, .tplus-h6{
+
+}
+
+
+
+/*hide*/
+.tplus-hide{
+	background-color: #fdf1ff;
+	padding: 5px;
+	border: 1px dashed #f01666;
+	border-radius: 3px;
+	margin:1em 0
+}
+.tplus-hide-title{
+	color:#f44336 !important;
+	display:block;
+	font-size:1.2em;
+	font-weight: bold;
+	text-align: center;
+	border: none !important;
+	cursor: pointer;
+}
+.tplus-hide-title:hover{
+	color:#f00 !important;
+}
+
+.tplus-hide-content{
+}
+
+/*login*/
+.tplus-login{
+	padding: 5px;
+	border: 1px dashed #29c4bd;
+	border-radius: 3px;
+	margin:1em 0
+}
+.tplus-login-title{
+	color: #c6c8ca;
+	font-style: italic;
+}
+.tplus-login-content{
+}
+.tplus-login-deny{
+	color:red;
+	font-weight: bold;
+	font-size: 1.2em;
+	margin: 5px 0 0 0;
+ }
+
+/*notily*/
+.tplus-notify{
+	text-align: center;
+	background-color: #fffca8;
+	border: 1px dashed red;
+	border-radius: 3px;
+	padding: 1px 5px;
+	margin:1em 0
+}
+.tplus-notify-title{
+	text-align: center;
+	color: #901bca;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-shadow: #ff37a6 2px 2px 5px;
+}
+.tplus-notify-content{
+}
+
+
+/*PopAlert*/
+.popalert {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	min-width: 300px;
+	max-width: 600px;
+	transform: translate(-50%,-50%);
+	z-index: 99999;
+	text-align: center;
+	padding: 15px;
+	border-radius: 3px;
+}
+.popalert-success {
+	color: #3c763d;
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+}
+.popalert-info {
+	color: #31708f;
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+}
+.popalert-warning {
+	color: #8a6d3b;
+	background-color: #fcf8e3;
+	border-color: #faebcc;
+}
+.popalert-danger {
+	color: #a94442;
+	background-color: #f2dede;
+	border-color: #ebccd1;
+}
+
+
+/*picbox*/
+.tplus-picbox{
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	padding: 1px 5px;
+	margin:1em 0
+}
+.tplus-picbox-title{
+	color: #2b91af !important;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-shadow: #cccccc 2px 2px 5px;
+	display: block !important;
+	border: none !important;
+	cursor: pointer;
+}
+.tplus-picbox-content{
+}
+.tplus-pbimg{
+	margin: 0.5em auto;
+	display: block;
+	border-radius: 3px;
+	box-shadow: #cccccc 2px 2px 5px;
+}
+.tplus-noborder{
+	border: none;
+	padding: 0;
+}
+.tplus-noborder .tplus-picbox-title{
+	display: none;
+}
+
+
+/*模糊*/
+.tplus-spoiler {
+	color: transparent;
+	background-color: transparent;
+	text-shadow: grey 0 0 10px;
+	cursor: pointer;
+	-webkit-transition: text-shadow .5s ease;
+	-moz-transition: text-shadow .5s ease;
+	transition: text-shadow .5s ease;
+}
+.tplus-spoiler:hover {
+	text-shadow: grey 0 0 5px;
+}
+.tplus-spoiler.revealed {
+	text-shadow: grey 0 0 0;
+}
+
+/* 带描述的图像 */
+img.tplus-imgdesc{
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+	display: block;
+}
+div.tplus-imgdesc{
+	margin-top: 3px;
+	display: block;
+	text-align: center;
+	color: #AAA;
+}
