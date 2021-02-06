@@ -1,28 +1,7 @@
 ﻿/* Typecho Plus
  * Created by 二笔青年 (http://clso.fun)
- * v0.6.0
+ * v0.6.1
  */
-
-/* DIV 包装 */
-.tplus-div{
-	display: block;
-	border: 1px dotted #bfbfbf;
-	border-radius: 2px;
-}
-.tplus-div .tplus-div-title{
-	display: block;
-	text-align: center;
-	font-size: 1.2em;
-}
-.tplus-div .tplus-div-content{
-	display: block;
-	padding: 3px;
-}
-/* SPAN 包装 */
-.tplus-span{
-	display: inline;
-	border-bottom: 1px dotted #bfbfbf;
-}
 
 /*文章换行标签自定义*/
 .post-content br{
@@ -44,29 +23,29 @@
 	color: #666;
 }
 
-/*高亮，需要使用 !important 来覆盖标签内置背景色*/
-span.tplus-highlight{
-	background-color: yellow !important;
+/*高亮*/
+.tplus-highlight{
+	background-color: yellow;
 }
 /*黑幕*/
-span.tplus-heimu{
+.tplus-heimu{
 	color: #000;
 	background-color: #000;
 	border-radius: 3px;
 	padding: 0 3px;
 	margin: 0 1px;
 }
-span.tplus-heimu:hover{
+.tplus-heimu:hover{
 	color: #fff;
 }
 /*tips提醒*/
-sup.tplus-tips{
+.tplus-tips{
 	color:#009688;
 	text-decoration: underline;
 	cursor: help;
 }
 /*自动选择*/
-span.tplus-select{
+.tplus-select{
 	background-color: #eee;
 	border-radius: 3px;
 	font-size: 0.9em;
@@ -171,16 +150,16 @@ hr.tplus-line5{
 	margin:1em 0
 }
 .tplus-hide-title{
-	color:#f44336 !important;
+	color:#f44336;
 	display:block;
 	font-size:1.2em;
 	font-weight: bold;
 	text-align: center;
-	border: none !important;
+	border: none;
 	cursor: pointer;
 }
 .tplus-hide-title:hover{
-	color:#f00 !important;
+	color:#f00;
 }
 
 .tplus-hide-content{
@@ -270,12 +249,12 @@ hr.tplus-line5{
 	margin:1em 0
 }
 .tplus-picbox-title{
-	color: #2b91af !important;
+	color: #2b91af;
 	font-size: 1.5em;
 	font-weight: bold;
 	text-shadow: #cccccc 2px 2px 5px;
-	display: block !important;
-	border: none !important;
+	display: block;
+	border: none;
 	cursor: pointer;
 }
 .tplus-picbox-content{
@@ -319,9 +298,232 @@ img.tplus-imgdesc{
 	margin-bottom: 0;
 	display: block;
 }
-div.tplus-imgdesc{
+div.tplus-imgdesc, span.tplus-imgdesc{
 	margin-top: 3px;
 	display: block;
 	text-align: center;
 	color: #AAA;
+}
+
+
+
+/* DIV包装 SPAN包装 预设风格 */
+.tplus-span{
+	display: inline;
+	box-sizing: border-box;
+}
+.tplus-div{
+	display: block;
+	box-sizing: border-box;
+}
+.tplus-div .tplus-div-title{
+	font-size: 1.2em;
+}
+.tplus-div .tplus-div-content{
+}
+
+/*分栏*/
+.tplus-div.half{
+	width: 48%;
+	margin-right: 1%;
+	float: left;
+	background-color: #eee;
+	padding: 3px;
+}
+.tplus-div.half .tplus-div-title{
+	border-bottom: #ccc solid 1px;
+}
+.tplus-div.half .tplus-div-content{
+}
+
+/*简易盒子*/
+.tplus-div.box{
+	border-radius: 1em;
+	margin: 1em auto -0.5em auto;
+	padding: 0.5em 0.5em 0.5em 1em;
+	overflow: hidden;
+	background: #eee;
+}
+.tplus-div.box .tplus-div-title{
+	text-align: center;
+}
+.tplus-div.box .tplus-div-content{
+}
+
+/*消息框*/
+.tplus-div.info{
+	border-radius: 1em;
+	margin: 1em auto -0.5em auto;
+	padding: 1em 1em 1em 70px;
+	overflow: hidden;
+
+	background-color: #d1d7df;
+	background-image: url(l_info.png);
+	background-position: 10px 50%;
+	background-repeat: no-repeat;
+	min-height: 68px;
+}
+.tplus-div.info .tplus-div-title{
+	text-align: center;
+}
+.tplus-div.info .tplus-div-content{
+}
+
+/*important框*/
+.tplus-div.important{
+	border-radius: 1em;
+	margin: 1em auto -0.5em auto;
+	padding: 1em 1em 1em 70px;
+	overflow: hidden;
+
+	background-color: #ffd39f;
+	background-image: url(l_important.png);
+	background-position: 10px 50%;
+	background-repeat: no-repeat;
+	min-height: 68px;
+}
+.tplus-div.important .tplus-div-title{
+	text-align: center;
+}
+.tplus-div.important .tplus-div-content{
+}
+
+/*alert框*/
+.tplus-div.alert{
+	border-radius: 1em;
+	margin: 1em auto -0.5em auto;
+	padding: 1em 1em 1em 70px;
+	overflow: hidden;
+
+	background-color: #ffbcaf;
+	background-image: url(l_alert.png);
+	background-position: 10px 50%;
+	background-repeat: no-repeat;
+	min-height: 68px;
+}
+.tplus-div.alert .tplus-div-title{
+	text-align: center;
+}
+.tplus-div.alert .tplus-div-content{
+}
+
+/*help框*/
+.tplus-div.help{
+	border-radius: 1em;
+	margin: 1em auto -0.5em auto;
+	padding: 1em 1em 1em 70px;
+	overflow: hidden;
+
+	background-color: #dcc2ef;
+	background-image: url(l_help.png);
+	background-position: 10px 50%;
+	background-repeat: no-repeat;
+	min-height: 68px;
+}
+.tplus-div.help .tplus-div-title{
+	text-align: center;
+}
+.tplus-div.help .tplus-div-content{
+}
+
+/*download框*/
+.tplus-div.download{
+	border-radius: 1em;
+	margin: 1em auto -0.5em auto;
+	padding: 1em 1em 1em 70px;
+	overflow: hidden;
+
+	background-color: #d6efc2;
+	background-image: url(l_download.png);
+	background-position: 10px 50%;
+	background-repeat: no-repeat;
+	min-height: 68px;
+}
+.tplus-div.download .tplus-div-title{
+	text-align: center;
+}
+.tplus-div.download .tplus-div-content{
+}
+
+/*todo框*/
+.tplus-div.todo{
+	border-radius: 1em;
+	margin: 1em auto -0.5em auto;
+	padding: 1em 1em 1em 70px;
+	overflow: hidden;
+
+	background-color: #c2efdd;
+	background-image: url(l_todo.png);
+	background-position: 10px 50%;
+	background-repeat: no-repeat;
+	min-height: 68px;
+}
+.tplus-div.todo .tplus-div-title{
+	text-align: center;
+}
+.tplus-div.todo .tplus-div-content{
+}
+
+/*tip框*/
+.tplus-div.tip{
+	border-radius: 1em;
+	margin: 1em auto -0.5em auto;
+	padding: 1em 1em 1em 70px;
+	overflow: hidden;
+
+	background-color: #fff79f;
+	background-image: url(l_tip.png);
+	background-position: 10px 50%;
+	background-repeat: no-repeat;
+	min-height: 68px;
+}
+.tplus-div.tip .tplus-div-title{
+	text-align: center;
+}
+.tplus-div.tip .tplus-div-content{
+}
+
+
+/*清理浮动*/
+.clear{
+	clear: both;
+	line-height: 0;
+	height: 0;
+	font-size: 1px;
+	visibility: hidden;
+	overflow: hidden;
+}
+/*位置*/
+.tplus-div.center{
+	margin-left: auto;
+	margin-right: auto;
+}
+.tplus-div.left{
+	margin-right: auto;
+}
+.tplus-div.right{
+	margin-left: auto;
+}
+/*宽度*/
+.tplus-div.w100{width: 100%}
+.tplus-div.w90{width: 90%}
+.tplus-div.w80{width: 80%}
+.tplus-div.w70{width: 70%}
+.tplus-div.w60{width: 60%}
+.tplus-div.w50{width: 50%}
+.tplus-div.w40{width: 40%}
+.tplus-div.w30{width: 30%}
+.tplus-div.w20{width: 20%}
+.tplus-div.w10{width: 10%}
+.tplus-div.w0{width: 0}
+
+.tplus-div.dotted, .tplus-span.dotted {
+	border: 1px dotted #bfbfbf;
+}.tplus-div.dashed, .tplus-span.dashed {
+	 border: 1px dashed #bfbfbf;
+ }.tplus-div.solid, .tplus-span.solid {
+	  border: 1px solid #bfbfbf;
+  }
+.tplus-div.textcenter {
+	text-align: center;
 }

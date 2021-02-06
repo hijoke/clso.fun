@@ -1,6 +1,6 @@
 ﻿/* Typecho Plus
  * Created by 二笔青年 (http://clso.fun)
- * v0.6.0
+ * v0.6.1
  */
 
 function selectText(target) {
@@ -76,11 +76,14 @@ $(".tplus-spoiler").click(function () {
 	$(this).toggleClass("revealed");
 });
 
-
-/*
 $(function () {
 	$("audio, video").each(function(){
-		this.volume = 0.3;
+		try{
+			if(this.getAttribute("data-volume") || this.getAttribute("volume"))
+				this.volume = this.getAttribute("data-volume") ? this.getAttribute("data-volume") : this.getAttribute("volume");
+			if(this.getAttribute("data-playbackrate") || this.getAttribute("playbackrate"))
+				this.playbackRate = this.getAttribute("data-playbackrate") ? this.getAttribute("data-playbackrate") : this.getAttribute("playbackrate");
+		}catch(e){}
 	});
 });
-*/
+
