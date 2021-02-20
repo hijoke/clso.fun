@@ -1,4 +1,4 @@
-# clso.fun 插件 typecho-plus 资源利用 JsDelivr CDN 加载加速
+# 利用 JsDelivr CDN 加速 clso.fun 插件 typecho-plus 静态资源
 在后台文件管理中，例如宝塔面板。
 打开文件`/usr/plugins/ClsoFun/Plugin.php`
 208 行改为
